@@ -29,7 +29,7 @@ export class AppComponent {
 		}, function(error, data) {
 		if (error) throw error;
 		
-		x.domain(data.map(function(d) { return d.letter; }));
+		x.domain(data.map((d) => { return d.letter; }));
 		y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
 		
 		g.append("g")
